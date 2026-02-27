@@ -1,0 +1,46 @@
+{
+  "bot_name": "ChatBot",
+  "greeting": "你好！今天我能帮你什么忙？",
+  "default_response": "我不太明白你的意思。你能换一种说法吗？",
+  "ai_api": {
+    "enabled": false,
+    "api_key": "your_api_key_here",
+    "api_url": "https://api.openai.com/v1/chat/completions",
+    "model": "gpt-3.5-turbo",
+    "max_tokens": 150
+  },
+  "response_rules": [
+    {
+      "keywords": ["hello", "hi", "你好", "嗨"],
+      "response": "你好！今天我能帮你什么忙？"
+    },
+    {
+      "keywords": ["how are you", "你好吗", "怎么样"],
+      "response": "我很好，谢谢！你呢？"
+    },
+    {
+      "keywords": ["name", "名字"],
+      "response": "我的名字是ChatBot。很高兴认识你！"
+    },
+    {
+      "keywords": ["help", "帮助"],
+      "response": "我可以帮助你回答一些基本问题。试着问我关于我自己的问题，或者只是打个招呼！"
+    },
+    {
+      "keywords": ["time", "时间"],
+      "response": "我无法获取当前时间，但我可以陪你聊天！"
+    },
+    {
+      "keywords": ["weather", "天气"],
+      "response": "我无法获取天气信息，但我很乐意和你聊其他话题！"
+    },
+    {
+      "keywords": ["再见", "bye", "goodbye"],
+      "response": "再见！祝你有愉快的一天！"
+    },
+    {
+      "keywords": ["谢谢", "thank you"],
+      "response": "不客气！很高兴能帮到你。"
+    }
+  ]
+}
