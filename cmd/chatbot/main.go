@@ -11,17 +11,25 @@ import (
 )
 
 func main() {
+	fmt.Println("Starting chatbot...")
+	
 	// 加载配置
+	fmt.Println("Loading configuration...")
 	cfg, err := config.Load()
 	if err != nil {
 		log.Fatalf("Failed to load config: %v", err)
 	}
+	fmt.Println("Configuration loaded successfully")
 
 	// 创建机器人实例
+	fmt.Println("Creating bot instance...")
 	chatbot := bot.New(cfg)
+	fmt.Println("Bot instance created successfully")
 
 	// 创建输入处理器
+	fmt.Println("Creating input handler...")
 	inputHandler := handler.NewInputHandler()
+	fmt.Println("Input handler created successfully")
 
 	// 启动聊天循环
 	fmt.Println("聊天机器人已启动。输入'exit'或'退出'退出程序。")
